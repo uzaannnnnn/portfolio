@@ -1,6 +1,174 @@
 export const myProjects = [
   {
     id: 1,
+    title: "Textile Manufacturing ERP",
+    description:
+      "A comprehensive Textile Manufacturing ERP MVP built on Odoo 19 Community, containerized with Docker & Docker Compose, and powered by PostgreSQL 16. Designed for fabric roll management, production tracking, and strict quality control gates.",
+    subDescription: [
+      "Built as a domain-driven ERP MVP on Odoo 19 Community to solve operational challenges in textile mills, bridging the gap between generic continuous meter accounting and discrete physical roll tracking.",
+      "Engineered 4 modular custom addons (textile_core, textile_inventory, textile_mrp, textile_quality) enforcing a 1 Roll = 1 Stock Lot invariant, a production roll registration wizard with mass/length balance checks, and a 4-location QC quarantine workflow (QC-Hold, Stock, Rework, Scrap).",
+      "Features server-side delivery validation blocking uninspected/rejected rolls or partial roll quantities, complete bi-directional traceability from raw yarn lots to customer shipments, and an automated 32-step integration test runner with 41 passing unit tests.",
+    ],
+    href: "",
+    github: "https://github.com/uzaannnnnn/odoo19-textile-erp",
+    logo: "",
+    image: "/assets/projects/odoo-textile-erp.jpg",
+    tags: [
+      {
+        id: 1,
+        name: "Odoo 19",
+        path: "/assets/logos/odoo.svg",
+      },
+      {
+        id: 2,
+        name: "Python",
+        path: "/assets/logos/python.svg",
+      },
+      {
+        id: 3,
+        name: "Docker",
+        path: "/assets/logos/docker.svg",
+      },
+      {
+        id: 4,
+        name: "PostgreSQL 16",
+        path: "/assets/logos/postgresql.svg",
+      },
+    ],
+  },
+  {
+    id: 2,
+    title: "DSS News - Age-Adaptive News Portal",
+    description:
+      "A fullstack Decision Support System (DSS) news portal with age-targeted content recommendations using the Profile Matching algorithm. Built with Next.js & Golang, powered by Supabase (PostgreSQL), and deployed across Vercel and Render.",
+    subDescription: [
+      "Developed an intelligent Decision Support System (DSS) news portal that dynamically tailors and recommends news content based on reader age groups (Anak-anak 7–12, Remaja 13–20, Dewasa 21+), promoting safe and age-appropriate information consumption.",
+      "Frontend is built with Next.js 15, React 19, TypeScript, and TailwindCSS, deployed on Vercel (GitHub: uzaannnnnn/dss-news). Features intuitive age category selection, dynamic card filtering, and responsive article layouts.",
+      "Backend microservice (pm-service) is implemented in Go (Golang) with Gin framework, connected to a Supabase (PostgreSQL) database via pgx driver for persistent data storage, deployed on Render (GitHub: uzaannnnnn/pm-service). It handles high-performance Profile Matching calculations, age-targeted query filters, and RESTful API endpoints.",
+    ],
+    href: "https://dss-news.vercel.app",
+    github: "https://github.com/uzaannnnnn/dss-news",
+    logo: "",
+    image: "/assets/projects/dss-news.png",
+    tags: [
+      {
+        id: 1,
+        name: "Next.js",
+        path: "/assets/logos/nextjs.svg",
+      },
+      {
+        id: 2,
+        name: "Golang",
+        path: "/assets/logos/golang.svg",
+      },
+      {
+        id: 3,
+        name: "Supabase (PostgreSQL)",
+        path: "/assets/logos/supabase.svg",
+      },
+      {
+        id: 4,
+        name: "TypeScript",
+        path: "/assets/logos/typescript.svg",
+      },
+      {
+        id: 5,
+        name: "Vercel",
+        path: "/assets/logos/vercel.svg",
+      },
+      {
+        id: 6,
+        name: "Render",
+        path: "/assets/logos/render.svg",
+      },
+    ],
+  },
+  {
+    id: 3,
+    title: "KabarLokal - Regional News & Community Portal",
+    description:
+      "A modern local news web platform featuring category-based filtering, rich article editor, Google OAuth authentication, interactive maps, and AWS S3 media storage. Built with Next.js 14 and MongoDB.",
+    subDescription: [
+      "Built KabarLokal, an interactive fullstack regional news platform designed to deliver community updates, regional culture, local economy, tourism, and trending news across various specific categories.",
+      "Developed with Next.js 14, React, TypeScript, and TailwindCSS, incorporating Google OAuth & JWT authentication, Swiper carousels for featured news banners, Quill rich text editor, and React-Leaflet for location-based news mapping.",
+      "Powered by MongoDB & Mongoose for flexible NoSQL document storage (articles, categories, comments, users) and AWS S3 for cloud media asset uploads. Deployed on Vercel (GitHub: uzaannnnnn/berita-lokal).",
+    ],
+    href: "https://kabar-lokal.vercel.app",
+    github: "https://github.com/uzaannnnnn/berita-lokal",
+    logo: "",
+    image: "/assets/projects/kabar-lokal.png",
+    tags: [
+      {
+        id: 1,
+        name: "Next.js 14",
+        path: "/assets/logos/nextjs.svg",
+      },
+      {
+        id: 2,
+        name: "MongoDB",
+        path: "/assets/logos/mongodb.svg",
+      },
+      {
+        id: 3,
+        name: "TypeScript",
+        path: "/assets/logos/typescript.svg",
+      },
+      {
+        id: 4,
+        name: "TailwindCSS",
+        path: "/assets/logos/tailwindcss.svg",
+      },
+      {
+        id: 5,
+        name: "Vercel",
+        path: "/assets/logos/vercel.svg",
+      },
+    ],
+  },
+  {
+    id: 4,
+    title: "Modifikasi Ori - Warehouse & Inventory System",
+    description:
+      "An end-to-end multi-location warehouse and inventory management system designed for motorcycle speedshops and automotive workshops. Built with React 19, Node.js, Express, and MongoDB.",
+    subDescription: [
+      "Developed a fullstack warehouse management system (WMS) and workshop landing page for Modifikasi Ori, handling multi-branch inventory, product tracking, raw materials, and production invoicing across 4 active branches.",
+      "Frontend is engineered with React 19, Vite, TailwindCSS, Framer Motion, and React Router v7, featuring JsBarcode integration for automated product and raw material barcode labeling, and responsive speedshop operational dashboards.",
+      "Backend REST API service built with Node.js and Express, connected to MongoDB via Mongoose. Features secure JWT authentication, Zod input validation schemas, Pino structured logging, rate limiting, and role-based access control (Admin & Manager) for inventory transfers.",
+    ],
+    href: "https://modifikasiori.com/",
+    github: "https://github.com/uzaannnnnn/warehouse",
+    logo: "",
+    image: "/assets/projects/modifikasi-ori.png",
+    tags: [
+      {
+        id: 1,
+        name: "React 19",
+        path: "/assets/logos/react.svg",
+      },
+      {
+        id: 2,
+        name: "Node.js",
+        path: "/assets/logos/nodejs.svg",
+      },
+      {
+        id: 3,
+        name: "Express",
+        path: "/assets/logos/express.svg",
+      },
+      {
+        id: 4,
+        name: "MongoDB",
+        path: "/assets/logos/mongodb.svg",
+      },
+      {
+        id: 5,
+        name: "TailwindCSS",
+        path: "/assets/logos/tailwindcss.svg",
+      },
+    ],
+  },
+  {
+    id: 5,
     title: "Smart Home AI Chatbot with Hugging Face Integration",
     description:
       "An AI-powered smart home chatbot built using React.js for the frontend and Go (Golang) for the backend, integrated with Hugging Face NLP models for intelligent responses and data processing.",
@@ -31,7 +199,7 @@ export const myProjects = [
     ],
   },
   {
-    id: 2,
+    id: 6,
     title: "Roblox-Inspired Profile UI Design",
     description:
       "Designed a Roblox-style profile UI using HTML, TailwindCSS, and JavaScript, with a focus on responsive, mobile-first UX. Collaborated in a small team to ensure smooth user interaction and accessibility.",
@@ -56,7 +224,7 @@ export const myProjects = [
     ],
   },
   {
-    id: 3,
+    id: 7,
     title: "Pharma Distribution Web App (B2B Model)",
     description:
       "Built a B2B pharmaceutical distribution system using Laravel, TailwindCSS, and JavaScript. Developed full-stack features in a two-person team with a focus on responsive and clean UI design.",
@@ -91,7 +259,7 @@ export const myProjects = [
     ],
   },
   {
-    id: 4,
+    id: 8,
     title: "Restaurant Self-Ordering App with Midtrans Integration",
     description:
       "Built a fullstack restaurant web app featuring QR code scanning, menu browsing, shopping cart, and checkout. Developed with a mobile-first approach and integrated Midtrans for real-time payments.",
@@ -127,7 +295,7 @@ export const myProjects = [
     ],
   },
   {
-    id: 5,
+    id: 9,
     title: "MUA Booking System with Round-Robin Scheduling",
     description:
       "Built a Makeup Artist (MUA) booking system using Laravel, TailwindCSS, and JavaScript. Implemented a round-robin scheduling algorithm to assign available MUAs fairly based on availability.",
@@ -163,7 +331,7 @@ export const myProjects = [
     ],
   },
   {
-    id: 6,
+    id: 10,
     title: "Stationery Inventory Management System (Java EE + MySQL)",
     description:
       "Developed a stationery inventory management system using Java EE with JSP and JSTL, integrated with a MySQL database to manage incoming and outgoing stock efficiently.",
@@ -197,56 +365,90 @@ export const myProjects = [
 
 export const mySocials = [
   {
-    name: "WhatsApp",
-    href: "",
-    icon: "/assets/socials/whatsApp.svg",
-  },
-  {
     name: "Linkedin",
     href: "https://www.linkedin.com/in/muhamad-fauzan-58204b275/",
     icon: "/assets/socials/linkedIn.svg",
   },
   {
-    name: "Instagram",
-    href: "https://www.instagram.com/uzzaannn/",
-    icon: "/assets/socials/instagram.svg",
+    name: "GitHub",
+    href: "https://github.com/uzaannnnnn",
+    icon: "/assets/socials/github.svg",
+  },
+  {
+    name: "WhatsApp",
+    href: "https://wa.me/6283890575720",
+    icon: "/assets/socials/whatsApp.svg",
   },
 ];
 
 export const experiences = [
   {
-    title: "Frontend & Fullstack Developer",
-    job: "Freelancer",
-    date: "2022-2023",
+    title: "Master Teacher",
+    job: "PT. Ruang Raya Indonesia – Ruangguru",
+    date: "Jun 2025 – Present",
     contents: [
-      "Worked on various freelance projects as both a front-end and fullstack web developer, contributing to user-focused, responsive applications across multiple domains.",
-      "✅ Designed a Roblox-style profile UI using HTML, TailwindCSS, and JavaScript, emphasizing mobile-first and UX-driven layouts in a small collaborative team.",
-      "✅ Developed a B2B pharmaceutical distribution system using Laravel, TailwindCSS, and JavaScript, including a checkout and payment page integrated with Midtrans, focusing on clean fullstack development.",
-      "✅ Built a restaurant QR code scanning UI with menu browsing, cart, and checkout functionality, prioritizing mobile responsiveness and seamless payment integration.",
+      "Teaching foundational and applied programming using MIT App Inventor, Roblox Studio (Lua), and Python for middle to high school students.",
+      "Served as an official semifinal judge for Ruangguru Code Fest, assessing participants across the Bandung region in a nationwide coding competition.",
+      "Mentored students on individual and group software projects, fostering algorithmic thinking, computational problem-solving, and clean code principles.",
     ],
+    skills: ["Python", "Roblox Studio (Lua)", "MIT App Inventor", "Algorithms", "Mentoring"],
   },
   {
-    title: "Fullstack & AI Developer",
-    job: "Academic & Industry Collaboration",
-    date: "2023–2024",
+    title: "Fullstack Developer (Internship)",
+    job: "PT. Winnicode Garuda Indonesia",
+    date: "Sep 2025 – Jan 2026",
     contents: [
-      "Assisted Web Programming & IoT lab sessions, covering HTML, CSS, JavaScript, PHP, Laravel, and ESP8266-based projects.",
-      "Guided students in debugging code, preparing modules, and integrating simple frontend-backend IoT systems.",
-      "Developed fullstack web apps using ReactJS and Golang (Gin), with PostgreSQL, RESTful APIs, and authentication.",
-      "Integrated Hugging Face AI models (Phi, Tapas, NLP-Helsinki) into Golang backend for NLP use cases.",
-      "Worked in an agile team using Git; tested APIs and apps with Postman, Firebase, and json-server.",
+      "Engineered the KabarLokal regional news and community web portal using Next.js 14, React, TypeScript, and TailwindCSS with mobile-first UX.",
+      "Integrated secure authentication with Google OAuth & JWT, document data persistence with MongoDB & Mongoose, and cloud media storage via AWS S3.",
+      "Implemented interactive geospatial news mapping with Leaflet, dynamic category filters, and continuous deployment on Vercel with GitHub version control.",
     ],
+    skills: ["Next.js 14", "React", "TypeScript", "TailwindCSS", "MongoDB", "AWS S3", "Vercel"],
   },
   {
-    title: "Coding Mentor",
-    job: "GuruKoding – Akademia by Ruangguru",
-    date: "2025–Present",
+    title: "ERP & Warehouse Systems Developer",
+    job: "Enterprise Engineering & Projects",
+    date: "2025 – 2026",
     contents: [
-      "Taught foundational programming concepts including HTML, CSS, and JavaScript through in-person sessions.",
-      "✅ Designed and delivered interactive learning materials to support beginner-friendly coding education.",
-      "✅ Mentored students on individual and group projects, tracking their progress and providing structured feedback.",
-      "✅ Helped students strengthen logical thinking, code organization, and basic problem-solving in real coding tasks.",
+      "Textile Manufacturing ERP: Built an ERP MVP on Odoo 19 Community, Docker Compose, and PostgreSQL 16. Engineered 4 custom addons (textile_core, textile_inventory, textile_mrp, textile_quality) enforcing 1 Roll = 1 Stock Lot traceability, 4-location QC quarantine gates, and delivery validation rules with 41 passing unit tests and 32 integration test steps.",
+      "Modifikasi Ori (Warehouse & Speedshop): Architected a multi-branch warehouse management system (WMS) for 4 active branches using React 19, Vite, TailwindCSS, Node.js Express, and MongoDB. Integrated JsBarcode for real-time barcode generation and tracking across motorcycle parts and workshop raw materials.",
     ],
+    skills: ["Odoo 19", "Python", "Docker", "PostgreSQL", "React 19", "Node.js", "Express", "MongoDB", "JsBarcode"],
+  },
+  {
+    title: "Fullstack & AI Developer (Internship)",
+    job: "PT. Ruang Raya Indonesia – Ruangguru",
+    date: "Sep 2024 – Dec 2024",
+    contents: [
+      "Developed fullstack web applications using ReactJS and Golang with RESTful APIs, JWT authentication, and PostgreSQL using the Gin framework.",
+      "Integrated Hugging Face AI models into Golang microservices: NLP-Helsinki for multilingual machine translation, TAPAS for CSV/tabular data question answering, and Phi-4 for reasoning.",
+      "Engineered DSS News: An age-adaptive Decision Support System news portal utilizing the Profile Matching algorithm with Golang/Gin backend on Render and Supabase (PostgreSQL), paired with Next.js 15 on Vercel.",
+      "Collaborated in an Agile Scrum sprint cycle using Git; conducted comprehensive endpoint API testing with Postman, Firebase, and json-server.",
+    ],
+    skills: ["ReactJS", "Golang (Gin)", "Hugging Face AI", "PostgreSQL", "Supabase", "REST APIs", "Agile/Scrum"],
+  },
+  {
+    title: "Assistant Lecturer & Lab Instructor",
+    job: "STMIK Mardira Indonesia",
+    date: "Aug 2023 – Aug 2024",
+    contents: [
+      "Led and assisted Web Programming laboratory sessions covering JavaScript, PHP, and Laravel, including syllabus design and student practical exam grading.",
+      "Supported practical IoT lab sessions involving ESP8266 microcontrollers, electronic sensors, and RESTful data communication.",
+      "Guided undergraduate students in debugging, database design, and algorithmic problem-solving for coursework and practical exams.",
+    ],
+    skills: ["PHP", "Laravel", "JavaScript", "IoT (ESP8266)", "Database Design", "Mentoring"],
+  },
+  {
+    title: "Fullstack Web Developer",
+    job: "Freelance & Collaborative Projects",
+    date: "2022 – 2023",
+    contents: [
+      "B2B Pharma Distribution: Built a B2B pharmaceutical ordering system with Laravel, TailwindCSS, JavaScript, MySQL, and Midtrans payment gateway.",
+      "Restaurant Self-Ordering: Developed a QR-code menu self-ordering system with mobile cart, checkout, and automated Midtrans payment verification.",
+      "MUA Booking System: Implemented a makeup artist booking platform with a round-robin scheduling algorithm to distribute appointments fairly.",
+      "Stationery Inventory: Built an inventory management system for a stationery store using Java EE (JSP, JSTL, Servlets) and MySQL.",
+      "Roblox Profile UI: Crafted a responsive, mobile-first profile user interface inspired by Roblox using HTML, TailwindCSS, and JavaScript.",
+    ],
+    skills: ["Laravel", "TailwindCSS", "Java EE", "MySQL", "Midtrans", "JavaScript"],
   },
 ];
 export const reviews = [

@@ -5,10 +5,13 @@ const Alert = ({ type, text }) => {
     visible: { opacity: 1, y: 0, scale: 1 },
     exit: { opacity: 0, y: -50, scale: 0.8 },
   };
+  const isDanger = type === "danger";
+  const isInfo = type === "info";
+
   return (
     <AnimatePresence>
       <motion.div
-        className="fixed z-50 flex items-center justify-center bottom-5 right-5"
+        className="fixed z-50 flex items-center justify-center bottom-5 right-5 max-w-sm"
         initial="hidden"
         animate="visible"
         exit="exit"
@@ -16,18 +19,18 @@ const Alert = ({ type, text }) => {
         transition={{ duration: 0.3, ease: "easeInOut" }}
       >
         <div
-          className={`p-2 ${
-            type === "danger" ? "bg-red-800" : "bg-royal"
-          } items-center text-indigo-100 leading-none lg:rounded-full flex lg:inline-flex rounded-md p-5`}
+          className={`p-4 items-center text-indigo-100 leading-normal rounded-xl flex shadow-xl border border-white/10 ${
+            isDanger ? "bg-red-900/95" : isInfo ? "bg-blue-900/95" : "bg-royal/95"
+          }`}
         >
           <p
-            className={`flex rounded-full ${
-              type === "danger" ? "bg-red-500" : "bg-lavender"
-            } uppercase px-2 py-1 text-xs font-semibold mr-3`}
+            className={`flex rounded-full uppercase px-2.5 py-1 text-xs font-bold mr-3 ${
+              isDanger ? "bg-red-500 text-white" : isInfo ? "bg-blue-500 text-white" : "bg-lavender text-white"
+            }`}
           >
-            {type === "danger" ? "Failed" : "Success"}
+            {isDanger ? "Failed" : isInfo ? "Info" : "Success"}
           </p>
-          <p className="mr-2 text-left">{text}</p>
+          <p className="text-sm text-left">{text}</p>
         </div>
       </motion.div>
     </AnimatePresence>

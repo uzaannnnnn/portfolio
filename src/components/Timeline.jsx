@@ -1,6 +1,5 @@
-"use client";
 import { useScroll, useTransform, motion } from "framer-motion";
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export const Timeline = ({ data }) => {
   const ref = useRef(null);
@@ -12,7 +11,7 @@ export const Timeline = ({ data }) => {
       const rect = ref.current.getBoundingClientRect();
       setHeight(rect.height);
     }
-  }, [ref]);
+  }, [ref, data]);
 
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -29,29 +28,57 @@ export const Timeline = ({ data }) => {
         {data.map((item, index) => (
           <div
             key={index}
-            className="flex justify-start pt-10 md:pt-40 md:gap-10"
+            className="flex justify-start pt-10 md:pt-32 md:gap-10"
           >
             <div className="sticky z-40 flex flex-col items-center self-start max-w-xs md:flex-row top-40 lg:max-w-sm md:w-full">
-              <div className="absolute flex items-center justify-center w-10 h-10 rounded-full -left-[15px] bg-midnight">
-                <div className="w-4 h-4 p-2 border rounded-full bg-neutral-800 border-neutral-700" />
+              <div className="absolute flex items-center justify-center w-10 h-10 rounded-full -left-[15px] bg-midnight border border-white/10 shadow-lg">
+                <div className="w-3.5 h-3.5 rounded-full bg-sand shadow-[0_0_8px_rgba(214,153,92,0.6)]" />
               </div>
-              <div className="flex-col hidden gap-2 text-xl font-bold md:flex md:pl-20 md:text-4xl text-neutral-300">
-                <h3>{item.date}</h3>
-                <h3 className="text-3xl text-neutral-400">{item.title}</h3>
-                <h3 className="text-3xl text-neutral-500">{item.job}</h3>
+              <div className="flex-col hidden gap-1.5 md:flex md:pl-16 text-neutral-300">
+                <span className="text-sm font-semibold tracking-wider text-sand uppercase">
+                  {item.date}
+                </span>
+                <h3 className="text-2xl font-bold text-white leading-tight">
+                  {item.title}
+                </h3>
+                <h4 className="text-base font-medium text-neutral-400 leading-snug">
+                  {item.job}
+                </h4>
               </div>
             </div>
 
-            <div className="relative w-full pl-20 pr-4 md:pl-4">
-              <div className="block mb-4 text-2xl font-bold text-left text-neutral-300 md:hidden ">
-                <h3>{item.date}</h3>
-                <h3>{item.job}</h3>
+            <div className="relative w-full pl-14 pr-4 md:pl-4">
+              <div className="block mb-4 text-left text-neutral-300 md:hidden">
+                <span className="text-xs font-semibold tracking-wider text-sand uppercase">
+                  {item.date}
+                </span>
+                <h3 className="text-xl font-bold text-white mt-0.5">
+                  {item.title}
+                </h3>
+                <h4 className="text-sm font-medium text-neutral-400">
+                  {item.job}
+                </h4>
               </div>
-              {item.contents.map((content, index) => (
-                <p className="mb-3 font-normal text-neutral-400" key={index}>
+              {item.contents.map((content, idx) => (
+                <p
+                  className="mb-2.5 font-normal text-neutral-400 leading-relaxed text-sm md:text-base"
+                  key={idx}
+                >
                   {content}
                 </p>
               ))}
+              {item.skills && (
+                <div className="flex flex-wrap gap-2 mt-3 pt-1">
+                  {item.skills.map((skill, sIdx) => (
+                    <span
+                      key={sIdx}
+                      className="px-2.5 py-1 text-xs font-medium rounded-full bg-white/5 border border-white/10 text-neutral-300 hover:border-sand/40 transition-colors"
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              )}
             </div>
           </div>
         ))}

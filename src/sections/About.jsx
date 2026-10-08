@@ -54,7 +54,7 @@ const About = () => {
             />
             <Card
               style={{ rotate: "10deg", top: "35%", left: "49%" }}
-              text="K.I.S.S"
+              text="Odoo"
               containerRef={grid2Container}
             />
             <Card

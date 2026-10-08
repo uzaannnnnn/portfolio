@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { motion } from "motion/react";
+import CvDropdown from "../components/CvDropdown";
+
 function Navigation() {
   return (
     <ul className="nav-ul">
@@ -23,14 +25,8 @@ function Navigation() {
           Contact
         </a>
       </li>
-      <li className="nav-li">
-        <a
-          href="/cv.pdf"
-          download
-          className="inline-block px-4 py-1 mt-2 rounded-md border border-green-400 text-green-400 hover:bg-green-400 hover:text-black transition sm:mt-0"
-        >
-          My CV
-        </a>
+      <li className="nav-li flex items-center justify-center">
+        <CvDropdown />
       </li>
     </ul>
   );
@@ -52,7 +48,7 @@ const Navbar = () => {
             className="flex cursor-pointer text-neutral-400 hover:text-white focus:outline-none sm:hidden"
           >
             <img
-              src={isOpen ? "assets/close.svg" : "assets/menu.svg"}
+              src={isOpen ? "/assets/close.svg" : "/assets/menu.svg"}
               className="w-6 h-6"
               alt="toggle"
             />

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import ProjectDetails from "./ProjectDetails";
 
 const Project = ({
@@ -6,6 +6,7 @@ const Project = ({
   description,
   subDescription,
   href,
+  github,
   image,
   tags,
   setPreview,
@@ -31,7 +32,7 @@ const Project = ({
           className="flex items-center gap-1 cursor-pointer hover-animation"
         >
           Read More
-          <img src="assets/arrow-right.svg" className="w-5" />
+          <img src="/assets/arrow-right.svg" className="w-5" alt="arrow" />
         </button>
       </div>
       <div className="bg-gradient-to-r from-transparent via-neutral-700 to-transparent h-[1px] w-full" />
@@ -43,6 +44,7 @@ const Project = ({
           image={image}
           tags={tags}
           href={href}
+          github={github}
           closeModal={() => setIsHidden(false)}
         />
       )}
